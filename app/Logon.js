@@ -14,9 +14,26 @@ export default class LogOn extends Component {
 		this.state = {
 			notPassword: true
 		}
-    }
+  }
   
 	onPressed = () => {
+		fetch("http://localhost:6060/register", {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/x-www-form-urlencoded',
+			},
+			
+			body: JSON.stringify({
+				usernmame: 'James',
+				password: '123123',
+				email: 'james@gmail.com'
+			}),
+		})
+      .then(response => response.json())
+      .then(res => {
+				console.log(res)
+      });
+
 		const { navigate } = this.props.navigation;
 		navigate('UserList');
 	};
