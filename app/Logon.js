@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { 
-	ScrollView, 
 	Text, 
 	View, 
 	StyleSheet, 
@@ -15,12 +14,12 @@ export default class LogOn extends Component {
 		this.state = {
 			notPassword: true
 		}
-  }
+    }
   
-  onPressed = () => {
-    const { navigate } = this.props.navigation;
-    navigate('UserList');
-  };
+	onPressed = () => {
+		const { navigate } = this.props.navigation;
+		navigate('UserList');
+	};
 
 	render(){
 		return(

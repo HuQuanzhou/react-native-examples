@@ -3,24 +3,25 @@ import {
 	ScrollView, 
 	Text, 
 	View, 
-	StyleSheet, 
-	TextInput, 
-	TouchableHighlight,
+	StyleSheet,
+	TouchableHighlight
 } from 'react-native';
 
 //成员
 class Member extends Component{
 	render(){
 		return(
-			<View style={styles.everone}>
-				<View style={styles.icon}>
-					<Text style={{fontSize: 20}}>胡</Text>
-				</View>
-				<View style={{justifyContent: 'center', marginLeft: 10,}}>
-					<Text style={styles.name}>胡泉舟</Text>
-					<Text style={styles.state}>[wifi在线]   一切尽在无言之中</Text>
-				</View>
-			</View>
+			<TouchableHighlight style={styles.everone} onPress={()=>{this.props.navigate('DetailedPage')}} underlayColor='white'>
+				<>
+					<View style={styles.icon}>
+						<Text style={{fontSize: 20}}>胡</Text>
+					</View>
+					<View style={{justifyContent: 'center', marginLeft: 10,}}>
+						<Text style={styles.name}>胡泉舟</Text>
+						<Text style={styles.state}>[wifi在线]   一切尽在无言之中</Text>
+					</View>
+				</>
+			</TouchableHighlight>
 		)
 	}
 }
@@ -53,32 +54,33 @@ const styles = StyleSheet.create({
 	},
 })
 
+
 //用户界面
 export default class UserList	extends Component {
 	render(){
 		return(
 			<ScrollView style={styles.container}>
-				<Member/>
-				<Member/>
-				<Member/>
-				<Member/>
-				<Member/>
-				<Member/>
-				<Member/>
-				<Member/>
-				<Member/>
-				<Member/>
-				<Member/>
-				<Member/>
-				<Member/>
-				<Member/>
-				<Member/>
-				<Member/>
-				<Member/>
-				<Member/>
-				<Member/>
-				<Member/>
-				<Member/>
+				<Member navigate={this.props.navigation.navigate}/>
+				<Member navigate={this.props.navigation.navigate}/>
+				<Member navigate={this.props.navigation.navigate}/>
+				<Member navigate={this.props.navigation.navigate}/>
+				<Member navigate={this.props.navigation.navigate}/>
+				<Member navigate={this.props.navigation.navigate}/>
+				<Member navigate={this.props.navigation.navigate}/>
+				<Member navigate={this.props.navigation.navigate}/>
+				<Member navigate={this.props.navigation.navigate}/>
+				<Member navigate={this.props.navigation.navigate}/>
+				<Member navigate={this.props.navigation.navigate}/>
+				<Member navigate={this.props.navigation.navigate}/>
+				<Member navigate={this.props.navigation.navigate}/>
+				<Member navigate={this.props.navigation.navigate}/>
+				<Member navigate={this.props.navigation.navigate}/>
+				<Member navigate={this.props.navigation.navigate}/>
+				<Member navigate={this.props.navigation.navigate}/>
+				<Member navigate={this.props.navigation.navigate}/>
+				<Member navigate={this.props.navigation.navigate}/>
+				<Member navigate={this.props.navigation.navigate}/>
+				<Member navigate={this.props.navigation.navigate}/>
 			</ScrollView>
 		)
 	}
